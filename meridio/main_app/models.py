@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 # Create your models here.
 
@@ -15,7 +16,7 @@ class Post(models.Model):
     item = models.CharField(max_length=50)
     picture = models.CharField(max_length=200)
     description = models.TextField(max_length=250)
-    date = models.DateField.auto_now()
+    date = models.DateField(default=date.today)
     price = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

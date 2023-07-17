@@ -17,4 +17,6 @@ def about(request):
     return render(request, 'about.html')
 
 def market_index(request):
-    return render(request, 'market/index.html')
+    return render(request, 'market/index.html', {
+        'items': items
+    })
