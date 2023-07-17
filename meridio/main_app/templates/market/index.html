@@ -3,4 +3,19 @@
 
     <h1>Market</h1>
 
+    {% for post in posts %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ post.item }}</span>
+            <p>Description: {{ post.description }}</p>
+            {% if post.price == '0' %}
+                <p>Price: Free</p>
+            {% else %}
+                <p>Price: ${{ post.price }}</p>
+            {% endif %}
+            <p>Date Posted: {{ post.date }}</p>
+        </div>
+    </div>
+{% endfor %}
+
 {% endblock %}
