@@ -75,14 +75,14 @@ a {
   }
 
   .values {
-    margin: 100px 200px 50px 200px;
+    margin: 100px 100px 50px 100px;
 
   }
 
   .about {
     backdrop-filter: blur(8px);
     background-color: #4547484d;
-    margin: 100px 100px 50px 50px;
+    margin: 100px 50px 50px 50px;
     border-radius: 10px;
     padding: 20px;
 
@@ -105,3 +105,34 @@ a {
     margin: 20px 100px;
     text-align: center;
   }
+
+  .linkedin {
+    border-radius: 8px;
+    background-color: transparent;
+    color: aliceblue;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 15px 10px;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 38px;
+
+  }
+
+  .homebtn {
+    border-radius: 8px;
+    background-color: transparent;
+    color: aliceblue;
+    position: fixed;
+    bottom: 0;
+    margin: 15px 60px;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 39px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+}
