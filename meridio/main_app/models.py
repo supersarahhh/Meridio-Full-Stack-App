@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from django.urls import reverse
 
 # Create your models here.
 
@@ -22,6 +23,9 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.item} - {self.date}'
+    
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'post_id': self.id})
 
 class Comment(models.Model):
     content = models.TextField(max_length=150)

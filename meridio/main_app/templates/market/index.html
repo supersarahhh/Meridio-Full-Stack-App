@@ -6,14 +6,13 @@
     {% for post in posts %}
     <div class="card">
         <div class="card-content">
-            <span class="card-title">{{ post.item }}</span>
-            <p>Description: {{ post.description }}</p>
-            {% if post.price == '0' %}
+            <h4>{{ post.item }}</h4>
+            <img src="{{ post.picture }}" width="300px">
+            {% if post.price == 0 %}
                 <p>Price: Free</p>
             {% else %}
                 <p>Price: ${{ post.price }}</p>
-            {% endif %}
-            <p>Date Posted: {{ post.date }}</p>
+            {% endif %}            
         </div>
     </div>
 {% endfor %}
