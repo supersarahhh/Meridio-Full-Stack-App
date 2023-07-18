@@ -1,14 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
 body {
     min-height: 100vh;
 
     background-color: black;
+    background-image: url("/static/images/meridioBG\.jpeg");
+    background-position: center;
+    background-size: cover;
     color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: thin 100;
   }
 
-  nav {
+  ul {
     display: flex;
     flex-direction: row;
     color: white;
+    justify-content: space-evenly;
+    margin: 20px;
 
   }
 
@@ -30,4 +44,8 @@ body {
 
   h1 {
     color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: thin 100;
   }
