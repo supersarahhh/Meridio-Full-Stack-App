@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Post
 
-
-
 # Create your views here.
 
 def home(request):
@@ -15,6 +13,7 @@ def about(request):
 def market_index(request):
     posts = Post.objects.all()
     return render(request, 'market/index.html', {
+
         'posts': posts
     })
 
@@ -35,3 +34,4 @@ class PostUpdate(UpdateView):
 class PostDelete(DeleteView):
     model = Post
     success_url = '/market'
+
