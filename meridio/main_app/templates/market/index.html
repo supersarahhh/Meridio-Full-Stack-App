@@ -4,17 +4,19 @@
     <h1>Market</h1>
 
     {% for post in posts %}
-    <div class="card">
-        <div class="card-content">
-            <h4>{{ post.item }}</h4>
-            <img src="{{ post.picture }}" width="300px">
-            {% if post.price == 0 %}
+    <a href="{% url 'detail' post.id %}">
+        <div class="card">
+            <div class="card-content">
+                <h4>{{ post.item }}</h4>
+                <img src="{{ post.picture }}" width="300px">
+                {% if post.price == 0 %}
                 <p>Price: Free</p>
-            {% else %}
+                {% else %}
                 <p>Price: ${{ post.price }}</p>
-            {% endif %}            
+                {% endif %}            
+            </div>
         </div>
-    </div>
+    </a>
 {% endfor %}
 
 {% endblock %}
