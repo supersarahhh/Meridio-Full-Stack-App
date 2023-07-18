@@ -9,4 +9,6 @@ urlpatterns = [
     path('market/create/', views.PostCreate.as_view(), name='post_create'),
     path('market/<int:pk>/update/', views.PostUpdate.as_view(), name='post_update'),
     path('market/<int:pk>/delete', views.PostDelete.as_view(), name='post_delete'),
+    path('market/<int:post_id>/add_bid/', views.add_bid, name='add_bid'),
+    
 ]
