@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
 
     background-color: black;
-    background-image: url("/static/images/meridioBG\.jpeg");
+    background-image: url("/static/images/6512217\.jpg");
     background-position: center;
     background-size: cover;
     color: white;
@@ -24,6 +24,18 @@ body {
     justify-content: space-evenly;
     margin: 20px;
 
+  }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+  p {
+    text-align: center;
+    margin:0 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 
   li {
@@ -48,4 +60,23 @@ body {
     justify-content: center;
     align-self: center;
     font-weight: thin 100;
+  }
+
+  h2 {
+    text-align: center;
+    align-items: center;
+  }
+
+  .values {
+    margin-top: 50px;
+
+  }
+
+  .about {
+    backdrop-filter: blur(8px);
+    background-color: #4547484d;
+    margin: 100px 50px 100px 50px;
+    border-radius: 10px;
+    padding: 20px;
+
   }
