@@ -1,8 +1,18 @@
 body {
-    display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    background-color: gray;
+    background-color: black;
+    color: white;
+
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    color: white;
+
+  }
+
+  li {
     color: white;
 
   }
