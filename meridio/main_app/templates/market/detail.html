@@ -28,5 +28,22 @@
       {{ comment_form.as_p }}
       <input type="submit" class="btn" value="Add Bid">
     </form>
+
+    {% for comment in post.comment_set.all %}
+      <div>
+        <p>{{comment.user}}</p>
+        <p>{{comment.content}}</p>
+        <p>{{comment.accepted}}</p>
+        <p>{{comment.id}}</p>
+      </div>
+      {% if comment.accepted %}
+      <form action="{% url 'add_contact' post.id %}" method="POST">
+        {% csrf_token %}
+        {{ contact_form.as_p }}
+        <input type="submit" class="btn" value="Contact">
+      </form>
+      {% endif %}
+
+    {% endfor %}
   </div>
 {% endblock %}

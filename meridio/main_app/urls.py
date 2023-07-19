@@ -10,5 +10,5 @@ urlpatterns = [
     path('market/<int:pk>/update/', views.PostUpdate.as_view(), name='post_update'),
     path('market/<int:pk>/delete', views.PostDelete.as_view(), name='post_delete'),
     path('market/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
-
+    path('market/<int:post_id>/add_contact/', views.add_contact, name='add_contact')
 ]
