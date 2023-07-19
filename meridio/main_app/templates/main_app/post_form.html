@@ -10,7 +10,7 @@
 {% endif %}
 
 <div class="container">
-  <form action="" method="POST" >
+  <form action="{% url 'post_create' %}" method="POST" >
   
     {% csrf_token %}
     <table>
@@ -19,8 +19,9 @@
       
     
     </table>
-  </form>
   <input type="submit" value="Submit!" class="btn">
+  </form>
+  
 
 </div>
 {% endblock %}
