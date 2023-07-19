@@ -102,7 +102,7 @@ a {
     background-color: #4547484d;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px 100px;
+    margin: 30px 20%;
     text-align: center;
   }
 
@@ -135,4 +135,67 @@ a {
 footer {
   display: flex;
   align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 8px;
+  margin: 3px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  padding: 5px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+}
+
+input[type="submit"] {
+  background-color: #4a085a;
+  opacity: 85%;  
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 250px;
+  margin: 20px;
+}
+
+input[type="submit"]:hover {
+    opacity: 50%;  
+    box-shadow: 5px 5px 35px 5px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.card-action {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card-action a {
+  margin: 20px 50px;
 }
