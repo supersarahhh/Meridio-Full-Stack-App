@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9e8dbc920d.js" crossorigin="anonymous"></script>
 
     <title>Meridio</title>
 </head>
@@ -20,12 +21,12 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                 <ul>
-            <a href="{% url 'home' %}">Meridio</a>
-            <a href="{% url 'home' %}">Home
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'index' %}">Market</a>
-            <a href="{% url 'post_create' %}">Add Listing</a>
+                <ul>
+                    <a href="{% url 'home' %}">Meridio</a>
+                    <a href="{% url 'home' %}">Home
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'index' %}">Market</a>
+                    <a href="{% url 'post_create' %}">Add Listing</a>
                 </ul>
             </div>
         </nav>
@@ -36,10 +37,9 @@
         {% endblock %}
     </main>
 
-    <footer>   
-        <button class="linkedin"><i class="fa fa-linkedin-square"></i></button>
-        <button class="homebtn"><i class="fa-brands fa-instagram"></i></button>
-        
+    <footer>
+            <a class="linkedin" href="https://facebook.com"><i class="fa fa-linkedin-square"></i></a>
+            <a class="homebtn" href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
     </footer>
 </body>
 </html>
