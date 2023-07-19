@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+
+{% extends 'base.html' %}
+{% load static %}
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
-    <title>Welcome Page</title>
 </head>
+
+{% block content%}
+
 <body>
     <section>
-        <video src="/assets/smoke.mp4" autoplay muted ></video>
+        <video src="../assets/video/smoke.mp4" autoplay muted ></video>
         <h1>
             <span>M</span>
             <span>e</span>
@@ -21,3 +23,5 @@
     </section>
 </body>
 </html>
+
+{% endblock %}

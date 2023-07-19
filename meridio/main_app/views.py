@@ -11,6 +11,9 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def welcome(request):
+    return render(request, 'welcome.html')
+
 def market_index(request):
     posts = Post.objects.all()
     return render(request, 'market/index.html', {
