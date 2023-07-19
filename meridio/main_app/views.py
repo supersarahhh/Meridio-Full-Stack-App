@@ -35,11 +35,12 @@ def add_comment(request, post_id):
     return redirect('detail', post_id=post_id)
     
 
-def add_contact(request, comment_id, post_id):
+def add_contact(request, post_id):    
     form = ContactForm(request.POST)
+    print(form)
     if form.is_valid():
         new_contact = form.save(commit=False)
-        new_contact.comment_id = comment_id
+        new_contact.post_id = post_id
         new_contact.save()
     return redirect('detail', post_id=post_id)
 

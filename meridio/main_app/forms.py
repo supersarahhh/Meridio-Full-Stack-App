@@ -9,4 +9,4 @@ class CommentForm(ModelForm):
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
-        fields = ['phone_number', 'transaction']
+        fields = ['phone_number', 'transaction', 'user', 'comment']
