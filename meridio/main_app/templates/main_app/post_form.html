@@ -9,13 +9,18 @@
 <h1>Create Post</h1>
 {% endif %}
 
-  <form action="" method="POST">
+<div class="container">
+  <form action="" method="POST" >
   
     {% csrf_token %}
     <table>
    
       {{ form.as_table }}
+      
+    
     </table>
-    <input type="submit" value="Submit!" class="btn">
   </form>
+  <input type="submit" value="Submit!" class="btn">
+
+</div>
 {% endblock %}
