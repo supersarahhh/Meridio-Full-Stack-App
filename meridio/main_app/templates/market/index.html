@@ -4,10 +4,6 @@
     <h2>Market</h2>
 
     {% for post in posts %} 
-    
-
-    
-       <div class="card"> 
             <div class="card-content">
                 <h4>{{ post.item }}</h4>
                <a href="{% url 'detail' post.id %}"> <img src="{{ post.picture }}" width=""></a>
@@ -17,8 +13,5 @@
                 <p>Price: ${{ post.price }}</p>
                 {% endif %}            
             </div>
-        </div>
-    
-    </a>
-   {% endfor %}
+       {% endfor %}
 {% endblock %}
