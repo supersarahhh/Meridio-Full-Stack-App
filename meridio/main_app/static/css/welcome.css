@@ -1,24 +1,22 @@
- body {
+body {
     margin: 0;
     padding: 0;
 }
 
 
- section {
+.welcome-section {
     height: 100vh;
     background: #000;
     overflow: hidden;
 }
 
- .welcome-section::before {
+.welcome-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #f00,#f00,#0f0,#0ff,#ff0,#0ff);
-    mix-blend-mode: color;
     pointer-events: none;
 }
 
@@ -28,7 +26,7 @@
     width: 100%;
 }
 
- h1 {
+.welcome-h1 {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -42,7 +40,7 @@
     text-transform: uppercase;
 }
 
- h1 span {
+.welcome-h1 span {
     display: inline-block;
     animation: animate 1s linear forwards;
 }
@@ -60,38 +58,38 @@
     }
 }
 
- h1 span:nth-child(1) {
-    color:#186aa0;
+.welcome-h1 span:nth-child(1) {
+    color: purple;
     opacity: 0;
     animation-delay: 2s;
 }
 
- h1 span:nth-child(2) {
+.welcome-h1 span:nth-child(2) {
     opacity: 0;
     animation-delay: 2.5s;
 }
 
- h1 span:nth-child(3) {
+.welcome-h1 span:nth-child(3) {
     opacity: 0;
     animation-delay: 2.75s;
 }
 
- h1 span:nth-child(4) {
+.welcome-h1 span:nth-child(4) {
     opacity: 0;
     animation-delay: 3s;
 }
 
- h1 span:nth-child(5) {
+.welcome-h1 span:nth-child(5) {
     opacity: 0;
     animation-delay: 3.5s;
 }
 
- h1 span:nth-child(6) {
+.welcome-h1 span:nth-child(6) {
     opacity: 0;
     animation-delay: 3.75s;
 }
 
- h1 span:nth-child(7) {
+.welcome-h1 span:nth-child(7) {
     opacity: 0;
     animation-delay: 4s;
 }
