@@ -1,17 +1,14 @@
 
 {% extends 'base.html' %}
-{% load static %}
 
-<head>
-    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
-</head>
+
 
 {% block content%}
 
 <body>
-    <section>
+    <section class="welcome-section">
         <video src="../assets/video/smoke.mp4" autoplay muted ></video>
-        <h1>
+        <h1 class="welcome-h1">
             <span>M</span>
             <span>e</span>
             <span>r</span>
@@ -22,6 +19,5 @@
         </h1>
     </section>
 </body>
-</html>
 
 {% endblock %}
