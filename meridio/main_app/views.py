@@ -23,7 +23,7 @@ def market_index(request):
 def market_detail(request, post_id):
     post = Post.objects.get(id=post_id)
     return render(request, 'market/detail.html', {
-        'post': post, 'comment_form': CommentForm()
+        'post': post, 'comment_form': CommentForm(), 'contact_form': ContactForm()
     })
 
 def add_comment(request, post_id):
@@ -37,7 +37,6 @@ def add_comment(request, post_id):
 
 def add_contact(request, post_id):    
     form = ContactForm(request.POST)
-    print(form)
     if form.is_valid():
         new_contact = form.save(commit=False)
         new_contact.post_id = post_id

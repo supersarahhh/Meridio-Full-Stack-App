@@ -27,6 +27,8 @@
     <form action="{% url 'add_comment' post.id %}" method="POST">
       {% csrf_token %}
       {{ comment_form.as_p }}
+      <p>{{user.id}}</p>
+      <p>{{post.id}}</p>
       <input type="submit" class="btn" value="Add Bid">
     </form>
 
@@ -41,10 +43,12 @@
       <form action="{% url 'add_contact' post.id %}" method="POST">
         {% csrf_token %}
         {{ contact_form.as_p }}
+        <p>{{comment.id}}</p>
         <input type="submit" class="btn" value="Contact">
       </form>
       {% endif %}
 
     {% endfor %}
+
   </div>
 {% endblock %}
