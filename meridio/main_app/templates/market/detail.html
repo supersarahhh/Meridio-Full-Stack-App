@@ -27,8 +27,6 @@
     <form action="{% url 'add_comment' post.id %}" method="POST">
       {% csrf_token %}
       {{ comment_form.as_p }}
-      <p>{{user.id}}</p>
-      <p>{{post.id}}</p>
       <input type="submit" class="btn" value="Add Bid">
     </form>
 
@@ -36,18 +34,19 @@
       <div>
         <p>{{comment.user}}</p>
         <p>{{comment.content}}</p>
-        <p>{{comment.accepted}}</p>
-        <p>{{comment.id}}</p>
       </div>
-      {% if comment.accepted %}
+      {% if comment.accepted and not comments.contact_set.all %}
       <form action="{% url 'add_contact' post.id %}" method="POST">
         {% csrf_token %}
         {{ contact_form.as_p }}
-        <p>{{comment.id}}</p>
         <input type="submit" class="btn" value="Contact">
       </form>
       {% endif %}
-
+      {% for contact in comments.contact_set.all %}
+        <p>{{contact.user}}</p>
+        <p>{{contact.transaction}}</p>
+        <p>{{contact.phone_number}}</p>
+      {% endfor %}
     {% endfor %}
 
   </div>

@@ -22,8 +22,9 @@ def market_index(request):
 
 def market_detail(request, post_id):
     post = Post.objects.get(id=post_id)
+    comments = Comment.objects.all()
     return render(request, 'market/detail.html', {
-        'post': post, 'comment_form': CommentForm(), 'contact_form': ContactForm()
+        'post': post, 'comments': comments, 'comment_form': CommentForm(), 'contact_form': ContactForm()
     })
 
 def add_comment(request, post_id):
