@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+# from django.views.generic.edit import UpdateComment, DeleteComment
+
 from .models import Post, Comment
 from .forms import CommentForm, ContactForm
 
@@ -19,6 +21,10 @@ def market_index(request):
     return render(request, 'market/index.html', {
         'posts': posts
     })
+
+def contact_form(request, post_id):
+   
+   return render(request, 'main_app/contact_form.html')
 
 def market_detail(request, post_id):
     post = Post.objects.get(id=post_id)
@@ -54,4 +60,12 @@ class PostUpdate(UpdateView):
 
 class PostDelete(DeleteView):
     model = Post
+    success_url = '/market'
+
+class CommentUpdate(UpdateView):
+    model = Comment
+    fields = ['user', 'content']
+
+class CommentDelete(DeleteView):
+    model = Comment
     success_url = '/market'

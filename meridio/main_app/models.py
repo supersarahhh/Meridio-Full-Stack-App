@@ -29,12 +29,14 @@ class Post(models.Model):
 
 class Comment(models.Model):
     content = models.TextField(max_length=150)
-    accepted = models.BooleanField()
+    accepted = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.post}'
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'post_id': self.post_id})
 
 
 class Contact(models.Model):
