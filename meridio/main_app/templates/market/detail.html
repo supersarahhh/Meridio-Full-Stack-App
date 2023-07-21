@@ -31,23 +31,36 @@
     </form>
 
     {% for comment in post.comment_set.all %}
-      <div>
+
+      <div class="offer-card">
         <p>{{comment.user}}</p>
         <p>{{comment.content}}</p>
+        
+        <a href="{% url 'comment_update' comment.id %}">Edit</a>
+        <a href="{% url 'comment_delete' comment.id %}">Delete</a>
+        <a href="{% url 'contact_form' comment.id %}" class="btn" style="color:#9D00FF">Contact Bidder</a>
+        
+        <br>
+        <br>
       </div>
-      {% if comment.accepted and not comments.contact_set.all %}
+
+{% if comment.accepted and not comments.contact_set.all %} 
+      
       <form action="{% url 'add_contact' post.id %}" method="POST">
+        
         {% csrf_token %}
         {{ contact_form.as_p }}
         <input type="submit" class="btn" value="Contact">
       </form>
       {% endif %}
       {% for contact in comments.contact_set.all %}
+      
         <p>{{contact.user}}</p>
         <p>{{contact.transaction}}</p>
         <p>{{contact.phone_number}}</p>
-      {% endfor %}
+      {% endfor %} 
     {% endfor %}
 
+    
   </div>
 {% endblock %}
