@@ -15,8 +15,10 @@
     <table>
    
       {{ form.as_table }}
-    </table>
+  </table> 
+      <p>{ contact.comment_id }</p>
+
     <input type="submit" value="Submit!" class="btn">
-    <a href="{% url 'detail' post.id%}">Accept bid</a>
+    <a href="{% url 'detail' contact.comment_id %}">Accept bid</a>
   </form>
 {% endblock %}
