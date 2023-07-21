@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # from django.views.generic.edit import UpdateComment, DeleteComment
 
-from .models import Post, Comment
+from .models import Post, Comment, Contact
 from .forms import CommentForm, ContactForm
 
 # Create your views here.
@@ -23,8 +23,8 @@ def market_index(request):
     })
 
 def contact_form(request, post_id):
-   
-   return render(request, 'main_app/contact_form.html')
+    
+    return render(request, 'main_app/contact_form.html')
 
 def market_detail(request, post_id):
     post = Post.objects.get(id=post_id)
@@ -44,6 +44,7 @@ def add_comment(request, post_id):
 
 def add_contact(request, post_id):    
     form = ContactForm(request.POST)
+    print(form)
     if form.is_valid():
         new_contact = form.save(commit=False)
         new_contact.post_id = post_id
@@ -69,3 +70,7 @@ class CommentUpdate(UpdateView):
 class CommentDelete(DeleteView):
     model = Comment
     success_url = '/market'
+
+class ContactCreate(CreateView):
+    model = Contact 
+    fields = '__all__'

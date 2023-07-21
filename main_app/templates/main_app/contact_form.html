@@ -9,16 +9,19 @@
 <h1>Contact Form</h1>
 {% endif %}
 
+<div class="container">
   <form action="" method="POST">
    
     {% csrf_token %}
     <table>
    
       {{ form.as_table }}
-  </table> 
-      <p>{ contact.comment_id }</p>
+
+    </table> 
 
     <input type="submit" value="Submit!" class="btn">
-    <a href="{% url 'detail' contact.comment_id %}">Accept bid</a>
+    
   </form>
+</div>
+
 {% endblock %}

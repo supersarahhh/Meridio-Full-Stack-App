@@ -44,7 +44,10 @@ class Contact(models.Model):
     phone_number = models.CharField(max_length=15)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.comment}'
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'post_id': self.post_id})
 

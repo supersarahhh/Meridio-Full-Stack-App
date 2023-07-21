@@ -20,5 +20,5 @@ urlpatterns = [
  
  path('market/<int:pk>/delete_comment', views.CommentDelete.as_view(), name='comment_delete'),
 
-path('market/<int:post_id>/contact_form/', views.contact_form, name='contact_form')
+    path('market/<int:post_id>/contact_form/', views.ContactCreate.as_view(), name='contact_form')
 ]
