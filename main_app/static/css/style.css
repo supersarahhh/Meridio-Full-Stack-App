@@ -5,17 +5,18 @@
   
 }
 
-body {
-    min-height: 100vh;
-    background-color: black;
-    background-image: url("/static/images/6512217.jpg");
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    object-fit: initial;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-weight: thin 100;
+html {
+  min-height: 100%;
+  background-image: url("/static/images/6512217.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: thin 100;
+
 }
 
   ul {
@@ -44,8 +45,8 @@ a:hover {
 p {
     text-align: center;
     margin:0 50px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    /* margin-top: 10px; */
+    /* margin-bottom: 30px; */
   }  
 
   li {
@@ -182,6 +183,7 @@ footer {
 }
 
 input[type="text"],
+input[type="date"],
 input[type="number"],
 textarea {
   padding: 8px;
@@ -222,7 +224,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 250px;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 input[type="submit"]:hover {
@@ -254,10 +256,17 @@ img {
   width: 300px;
   height: 300px;
   padding: 30px;
-  
+  filter: drop-shadow(2px 8px 15px #c876f88d)
   }
 
   .home-cards {
+    backdrop-filter: blur(8px);
+    background-color: #4547484d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 100px;
+    margin-bottom: 100px;
+    text-align: center;
     flex: 300px;
     margin: 30px;
 
@@ -267,7 +276,7 @@ img {
     padding: 30px;
     width: 100%;
     height: 500px;
-    border: 2px solid black;
+    border: 2px solid gray;
     background: transparent;
     text-decoration: none;
     color: white;
@@ -291,19 +300,56 @@ img {
   } */
 
   .home-cards .h-card a .card--display i {
-    font-size: 60px;
+    /* font-size: 60px; */
     /* margin-top: 200px; */
   }
 
   .hidden-p {
+    font-size: 2.5vh;
     opacity: 0;
     /* visibility: hidden; */
     transition: opacity 0.5s ease-in-out;
+    margin-bottom: 10px;
   }
 
   .h-card:hover .hidden-p {
-    opacity: 1;
+    opacity: 100%;
     visibility: visible;
+  }
+
+  .comment-btn {
+    display: inline;
+   
+  }
+
+  .offer-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  .offer-card  p,
+  a {
+    color: #fff;
+    text-shadow: 1px 1px 2px #4a085a;
+
+
+  }
+
+  .comment-content {
+    margin: 10px 20%;
+    
+  }
+
+
+  .offer-card {
+    backdrop-filter: blur(8px);
+    background-color: opacity(8%) #4a085a;
+    display: flex;
+    justify-content: center;
+    align-self: center;    
+
   }
 
   /* .home-cards.delay-hover .h-card a:hover .card--display {
@@ -313,6 +359,122 @@ img {
   @media screen and (max-width: 800px) {
     .left, .main, .right {
       width: 100%;
+    }
+
+    .offer-card {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.5vh;
+    }
+
+    p {
+      text-overflow: wrap;
+      margin: 0;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+
+    }
+
+    ul {
+      font-size: 2.5vh;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 8px;
+  
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+
+    .offer-card {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      font-size: 2vh;
+    }
+
+    p {
+      text-overflow: wrap;
+      margin: 0;
+    }
+
+    img {
+      height: 70%;
+      width: 65%;
+
+    }
+
+    ul {
+      font-size: 2.5vh;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 8px;
+  
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+  
+      p {
+        font-size: 2.5vh;
+        text-overflow: wrap;
+        margin: 0;
+      }
+  
+
+      .offer-card {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5vh;
+      }
+
+      ul {
+        font-size: 2vh;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 8px;
+    
+      }
+    }
+  
+
+  @media screen and (max-width: 375px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+
+    .offer-card {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.5vh;
+    }
+
+    p {
+      font-size: 2.5vh;
+      text-overflow: wrap;
+      margin: 0;
+    }
+
+  
+
+    ul {
+      font-size: 2vh;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 8px;
+  
     }
   }
 
