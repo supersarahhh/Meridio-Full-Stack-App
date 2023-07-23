@@ -10,26 +10,25 @@ body {
     overflow: hidden;
 }
 
-.welcome-section::before {
+:not(.nav-wrapper).welcome-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(to right, rgb(103, 2, 161),rgb(103, 2, 161),#0f0,#0ff,#ff0,#0ff);
+    mix-blend-mode: color;
     pointer-events: none;
 }
+
 
  video {
     object-fit: cover;
     height: 100vh;
     width: 100%;
 }
-iframe {
-    object-fit: cover;
-    height: 100vh;
-    width: 100vw;
-}
+
 .welcome-h1 {
     margin: 0;
     padding: 0;
