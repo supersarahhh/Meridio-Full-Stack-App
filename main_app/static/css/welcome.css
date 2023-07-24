@@ -5,9 +5,11 @@ body {
 
 
 .welcome-section {
-    height: 100vh;
+    min-height: 100vh;
     background: #000;
     overflow: hidden;
+    width: 100%;
+    padding: 0;
 }
 
 :not(.nav-wrapper).welcome-section::before {
@@ -22,12 +24,6 @@ body {
     pointer-events: none;
 }
 
-
- video {
-    object-fit: cover;
-    height: 100vh;
-    width: 100%;
-}
 
 .welcome-h1 {
     margin: 0;
@@ -96,3 +92,58 @@ body {
     opacity: 0;
     animation-delay: 4s;
 }
+
+@media (min-width: 375px) and (max-width: 767px) {
+    video {
+        max-width: 100%;
+        min-height: 100vh;
+        margin-left: 0;
+       } 
+    .welcome-h1 {
+        font-size: 2rem;
+        margin-top: 3%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    video {
+     max-width: 100%;
+     min-height: 100vh;
+    } 
+    .welcome-h1 {
+     font-size: 3.5rem;
+     margin-top: 4%;
+    }
+ }
+
+@media (min-width: 1024px) and (max-width: 1309px) {
+    video {
+        max-width: 100%;
+        min-height: 100vh;
+    }
+    .welcome-h1 {
+        margin-top: 3%;
+    }
+}
+
+@media (min-width: 1310px) and (max-width: 1535px) {
+    video {
+        max-width: 100%;
+        min-height: 100vh;
+        margin-left: 5%;
+       } 
+    .welcome-h1 {
+        margin-top: 3%;
+    }
+}
+
+@media (min-width: 1536px) {
+    video {
+        min-width: 100%;
+        min-height: 100vh;
+    }
+    .welcome-h1 {
+        margin-top: 4%;
+    }
+}
+
