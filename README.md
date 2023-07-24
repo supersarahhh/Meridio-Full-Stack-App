@@ -33,3 +33,6 @@ https://meridio-b1615a040797.herokuapp.com/
 
 ## Unsolved Problems
 Due to model relationships and a lack of knowledge/understanding our forms have required fields that we would not want users to have to fill out. 
+
+## Resources 
+Our welcome page was designed after a video we found https://www.codesnail.com/css-text-reveal-from-smoke-animation/
