@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content%}
+
+<body>
+    <section class="welcome-section">
+        <video autoplay muted>
+            <source src="{% static 'images/smoke.mp4' %}" type="video/mp4">
+        </video>
+        <a href="{% url 'home' %}">
+        <h1 class="welcome-h1">
+            <span>M</span>
+            <span>e</span>
+            <span>r</span>
+            <span>i</span>
+            <span>d</span>
+            <span>i</span>
+            <span>o</span>
+        </h1>
+        </a>
+    </section>
+</body>
+
+{% endblock %}

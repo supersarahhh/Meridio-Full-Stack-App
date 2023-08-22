@@ -1,8 +1,11 @@
 # Meridio-Full-Stack-App
 Full-stack Django app
+https://meridio-b1615a040797.herokuapp.com/
 
-## Screenshot
-<img src=''>
+## Screenshots
+<img src='app_screenshots/Screenshot 2023-07-23 203912.png'>
+<img src='app_screenshots/Screenshot 2023-07-23 204009.png'>
+<img src='app_screenshots/Screenshot 2023-07-23 204043.png'>
 
 ## Technologies Used
 <ul>
@@ -14,7 +17,13 @@ Full-stack Django app
 </ul>
 
 ## Installation Instructions
-
+<ul>
+<li>Fork and clone this repository</li>
+<li>Open in a code editor</li>
+<li>Configure your database connection in meridio/settings.py</li>
+<li>Navigate to Meridio-Full-Stack-App file folder in terminal and run command python3 manage.py runserver </li>
+<li>Go to localhost:8000 in your browser and enjoy</li>
+</ul>
 
 ## Planning Materials
 <ul>
@@ -23,3 +32,7 @@ Full-stack Django app
 </ul>
 
 ## Unsolved Problems
+Due to model relationships and a lack of knowledge/understanding our forms have required fields that we would not want users to have to fill out. 
+
+## Resources 
+Our welcome page was designed after a video we found https://www.codesnail.com/css-text-reveal-from-smoke-animation/

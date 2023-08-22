@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/9e8dbc920d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <title>Meridio</title>
+</head>
+
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <ul>
+                   <b> <a href="{% url 'welcome' %}"><span style="color:#c574f8">M</span>eridio</a></b>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'index' %}">Market</a>
+                    <a href="{% url 'post_create' %}">Add Listing</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <h4>Connect with Meridio</h4>
+    <footer>     
+       <a href="https://linkedin.com" class="linkedin"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://instagram.com" class="homebtn"><i class="fa-brands fa-instagram"></i></a>
+    </footer>
+</body></html>
+
+
