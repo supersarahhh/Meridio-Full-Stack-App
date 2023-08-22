@@ -1,3 +1,5 @@
+*** See dev branch for completed team application ***
+
 # Meridio-Full-Stack-App
 Full-stack Django app
 
